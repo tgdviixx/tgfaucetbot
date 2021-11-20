@@ -16,6 +16,7 @@ import html
 import json
 import logging
 import traceback
+from typing import Tuple
 
 from telegram import Update, ParseMode
 from telegram.ext import (
@@ -44,47 +45,69 @@ class ApplicationTgApp(BulkHeart):
         self.chat_id = 0
         self.initExpress(self.chat_id)
 
-    def userId(self, update: Update) -> int:
+    def userId(self, update: Update) -> Tuple[bool, int]:
+        user_chat_id = -1
         try:
-            user = update.message.chat_id
+            if update.message is not None:
+                # from a text message
+                user_chat_id = update.message.chat.id
+            elif update.callback_query is not None:
+                # from a callback message
+                user_chat_id = update.callback_query.message.chat.id
         except AttributeError:
-            user = update.edited_message.from_user.id
-        return user
+            user_chat_id = update.edited_message.from_user.id
+
+        if user_chat_id > 0:
+            user_chat_id = update.message.chat.id
+            print("personal chat")
+            if user_chat_id == self._developer:
+                return (True, user_chat_id,)
+            else:
+                return (False, user_chat_id,)
+        else:
+            print("from group")
+            user_chat_id = update.message.from_user.id
+
+        print(f"User request from {user_chat_id}")
+        return (True, user_chat_id,)
 
     def start(self, update: Update, context: CallbackContext) -> int:
-        user = self.userId(update)
+        (yes, user) = self.userId(update)
         self.chat_id = user
         return FAUCETMODE
 
     def cmd_drop(self, update: Update, context: CallbackContext) -> int:
-        user = self.userId(update)
-        hx = update.message.text
-        y = hx.split(" ")
-        assert1 = True
-        assert2 = False
-        if len(y) == 1:
-            assert1 = False
-        else:
-            hx = hx.split(" ")[1]
-            print(hx)
-            assert2 = self.check_address(hx)
+        (okuse, user) = self.userId(update)
 
-        if assert2 and assert1:
-            okff = self.GetFaucetSystem()
-            res = okff.flow(str(user), hx)
-            if res:
-                # drop to this address now..
-                ethResult = self.give_eth(hx, okff.GiveAmount)
-                if ethResult:
-                    okff.faucet_done(hx)
-                    reply_msg = "✅ Successfully Credited"
-                else:
-                    reply_msg = "❌ Internal Invalid"
+        if okuse is True:
+            hx = update.message.text
+            y = hx.split(" ")
+            assert1 = True
+            assert2 = False
+            if len(y) == 1:
+                assert1 = False
             else:
-                reply_msg = "❌ Unable to claim or Invalid on anything"
-            okff.done()
+                hx = hx.split(" ")[1]
+                assert2 = self.check_address(hx)
+
+            if assert2 and assert1:
+                okff = self.GetFaucetSystem()
+                res = okff.flow(str(user), hx)
+                if res:
+                    # drop to this address now..
+                    ethResult = self.give_eth(hx, okff.GiveAmount)
+                    if ethResult:
+                        okff.faucet_done(hx)
+                        reply_msg = "✅ Successfully Credited"
+                    else:
+                        reply_msg = "❌ Internal Invalid"
+                else:
+                    reply_msg = "❌ Unable to claim or Invalid on anything"
+                okff.done()
+            else:
+                reply_msg = "❌ Invalid Address"
         else:
-            reply_msg = "❌ Invalid Address"
+            reply_msg = "🚸 Please add me to a group."
 
         update.message.reply_text(reply_msg)
         return FAUCETMODE
