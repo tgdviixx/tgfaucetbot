@@ -1,0 +1,494 @@
+2021-11-20 17:08:42,050 - apscheduler.scheduler - INFO - Scheduler started
+2021-11-20 17:13:03,257 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:03,257 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:03,265 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:09,148 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:09,148 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:09,149 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:15,717 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:15,718 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:15,718 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:23,851 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:23,851 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:23,852 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:31,121 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:31,121 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:31,121 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:41,780 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:41,780 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:41,781 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:13:57,500 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:57,501 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:13:57,502 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:14:13,457 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:14:13,457 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:14:13,457 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:14:30,965 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:14:30,965 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:14:30,966 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:15:01,276 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:15:01,276 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:15:01,277 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:15:44,284 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:15:44,284 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:15:44,285 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:16:18,804 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:16:18,804 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:16:18,804 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:16:53,403 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:16:53,403 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:16:53,404 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:17:27,974 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:17:27,975 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:17:27,975 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:19:17,624 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:17,624 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:17,624 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:19:23,235 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:23,236 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:23,236 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined
+2021-11-20 17:19:29,838 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:29,838 - codec.tg - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 2861, in get_updates
+    self._post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/bot.py", line 295, in _post
+    return self.request.post(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 361, in post
+    result = self._request_wrapper(
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/utils/request.py", line 283, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2021-11-20 17:19:29,839 - telegram.ext.dispatcher - ERROR - An uncaught error was raised while handling the error.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 536, in process_update
+    self.dispatch_error(None, update)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/telegram/ext/dispatcher.py", line 810, in dispatch_error
+    callback(update, context)
+  File "/Users/hesdx/Documents/b95/tgfaucetbot/codec/tg.py", line 107, in error_handler
+    context.bot.send_message(chat_id=self._developer, text=message, parse_mode=ParseMode.HTML)
+NameError: name 'ParseMode' is not defined

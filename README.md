@@ -1,4 +1,4 @@
-Auto-Reply-Telegram-BTC-Faucet-bot
+Auto-Reply-Telegram-TOKEN-Faucet-bot
 ========
 
 Telethon
@@ -23,7 +23,6 @@ It is a simple script to run the /faucet action in the BTC Faucet telegram bot.
 Installing
 ----------
 
-  pip3 install telethon
 
 
 Execution
