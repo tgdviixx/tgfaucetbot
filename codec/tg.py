@@ -150,15 +150,10 @@ class ApplicationTgApp(BulkHeart):
         # Add conversation handler with the states CHOOSING, BASIC_REPLY and UPLOAD_REPLY
         conv_handler = ConversationHandler(
             entry_points=[
-                CommandHandler('start', self.start)
+                CommandHandler('start', self.start),
+                CommandHandler("please", self.cmd_drop),
             ],
             states={
-                CHOOSING: [
-                    CommandHandler("please", self.cmd_drop),
-                    CommandHandler("okt", self.cmd_drop),
-                    CommandHandler("p", self.cmd_drop),
-                    CommandHandler("g", self.cmd_drop),
-                ],
                 FAUCETMODE: [
                     CommandHandler("please", self.cmd_drop),
                 ],
