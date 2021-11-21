@@ -6,10 +6,10 @@ sl_create_table = """
 CREATE TABLE memberfaucet (userid text, date numeric, claim text, symbol text, qty real, filled numeric)
 """
 sl_determine_f = "SELECT userid, claim, date FROM memberfaucet WHERE claim=? or userid=?;"
-sl_start_f = "INSERT INTO memberfaucet VALUES (?,?,?,?,?,false);"
-sl_start_sample = "INSERT INTO memberfaucet VALUES ('oko','87348798','0x839283','BTC',100,false);"
-sl_update_filled = "UPDATE memberfaucet SET filled=true WHERE claim=?;"
-sl_again_f = "UPDATE memberfaucet SET filled=false, date=? WHERE claim=?;"
+sl_start_f = "INSERT INTO memberfaucet VALUES (?,?,?,?,?,0);"
+sl_start_sample = "INSERT INTO memberfaucet VALUES ('oko','87348798','0x839283','BTC',100,0);"
+sl_update_filled = "UPDATE memberfaucet SET filled=1 WHERE claim=?;"
+sl_again_f = "UPDATE memberfaucet SET filled=0, date=? WHERE claim=?;"
 
 
 class TokenKeeperX:
