@@ -330,18 +330,20 @@ wrapcodebase() {
   deploy_codebase_wrapper "BSend"
 }
 
-run_web(){
+run_V1(){
 	pip3 install -r requirements.txt
   export LC_ALL="en_US.utf8"
   echo "" > tg.log
   for pid in $(ps aux | grep -i '/usr/bin/python3 coinopsend_tg.py' | awk '{print $2}'); do kill $pid; done
 	nohup python3 coinopsend_tg.py > tg.log &
 }
+run_V2(){
 
+}
 # the files to compile
 COMPILE_COIN="vault/multisend/BSend.sol"
 SOLVER=0.5.15
 #
 # LOCAL MACHINE ONLY the default path
-BUILDPATH=$HOME/Documents/b95/tgfaucetbot
-BUILD_DIR=$HOME/Documents/b95/tgfaucetbot/build
+BUILDPATH=""
+BUILD_DIR=""

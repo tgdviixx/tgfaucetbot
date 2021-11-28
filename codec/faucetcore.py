@@ -93,30 +93,3 @@ class TokenKeeperX:
     @property
     def GiveAmount(self) -> float:
         return self.giveaway
-
-
-class OKTFaucet(TokenKeeperX):
-    def __init__(self, root: str):
-        delta = datetime.timedelta(hours=24, minutes=0, seconds=0)
-        super().__init__(root, "OKT", 0.1, delta)
-
-
-class RSCFaucet(TokenKeeperX):
-    def __init__(self, root: str):
-        delta = datetime.timedelta(hours=0, minutes=2, seconds=0)
-        super().__init__(root, "RSC", 0.1, delta)
-
-
-ROOT = os.path.join(os.path.dirname(__file__))
-
-
-def create_schema():
-    okf = OKTFaucet(ROOT)
-    okf.sampleNewTable()
-    okf.insertDataSample()
-    okf.done()
-
-
-def oncedrop():
-    okf = OKTFaucet(ROOT)
-    okf.flow("aux", "0x734897283479278797879")

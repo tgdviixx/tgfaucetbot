@@ -152,10 +152,12 @@ class ApplicationTgApp(BulkHeart):
             entry_points=[
                 CommandHandler('start', self.start),
                 CommandHandler("please", self.cmd_drop),
+                CommandHandler("thankyou", self.cmd_drop),
             ],
             states={
                 FAUCETMODE: [
                     CommandHandler("please", self.cmd_drop),
+                    CommandHandler("thankyou", self.cmd_drop),
                 ],
             },
             fallbacks=self.commands()

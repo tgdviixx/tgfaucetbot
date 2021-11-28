@@ -3,12 +3,12 @@
 # pylint: disable=C0116,W0613
 # This program is dedicated to the public domain under the CC0 license.
 from eth_abi import exceptions
-from moody import conf
+from moody import Config
 from moody.contracttool import ContractTool
 from moody.m.erc20 import Ori20
 from web3 import exceptions as w3exceptions, Web3
 
-from codec.faucetcore import OKTFaucet
+from codec.faucetcore import TokenKeeperX
 from key import private_key, LISTDE
 
 
@@ -42,7 +42,7 @@ class BulkHeart:
         self._bulkhandler.appendLogLine(content_line)
 
     def initExpress(self, chat_id: int = 0):
-        self._meta = ContractTool(conf.OKChainTestnet(), self._rootpath, LISTDE, [])
+        self._meta = ContractTool(self.Connect(), self._rootpath, LISTDE, [])
         self._meta.withPOA().Auth(private_key)
         self._meta.connect(self._rootpath, "x")
         self._meta.OverrideGasConfig(6000000, 1059100000)
@@ -105,5 +105,11 @@ class BulkHeart:
 
         return [tname, tsym, decimal]
 
-    def GetFaucetSystem(self) -> OKTFaucet:
-        return OKTFaucet(self._rootpath)
+    """def GetFaucetSystem(self) -> OKTFaucet:
+        return OKTFaucet(self._rootpath)"""
+
+    def GetFaucetSystem(self) -> TokenKeeperX:
+        pass
+
+    def Connect(self) -> Config:
+        pass

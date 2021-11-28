@@ -9,6 +9,6 @@ TG_API = "---------"
 DEVELOPER_CHAT_ID = 00000
 ALSO_ALLOWED = [00000]
 LISTDE = {
-    "HashOracle": "0x77bB814DEA6828F60AFDf528e3Db0B00Ceb080Ab",
-    "PriceOracle": "0x8c4e85D4784c9e300EA556177bef3D28fD2a61f9",
+    "HashOracle": "---",
+    "PriceOracle": "---",
 }

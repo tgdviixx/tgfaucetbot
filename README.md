@@ -24,8 +24,64 @@ Installing
 ----------
 
 
-
 Execution
 ----------
+  python3 tgoktinit.py
 
-  python3 autoreplier.py
+Trying something new
+----------
+Trying to manipulate the timestamp
+```
+
+import datetime
+
+x = datetime.datetime.now()
+now99 = datetime.datetime.now()
+now1 = now99.strftime("%H:%M:%S")
+
+time_1 = datetime.timedelta(hours=0, minutes=0, seconds=0)
+
+s1 = now99.strftime("%H:%M:%S")
+s2 = '09:00:00'
+FMT = '%H:%M:%S'
+tdelta = datetime.datetime.strptime(s1, FMT) - datetime.datetime.strptime(s2, FMT)
+print(tdelta.total_seconds())
+print(tdelta > time_1)
+
+print(now99)
+
+
+```
+
+
+Key file format is going to be like this
+
+```
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
+# exchange send coin
+private_key = '---'
+wallet_address = '---'
+TG_API = "---------"
+# This can be your own ID, or one for a developer group/channel.
+# You can use the /start command of this bot to see your chat id.
+DEVELOPER_CHAT_ID = 00000
+ALSO_ALLOWED = [00000]
+LISTDE = {
+    "HashOracle": "----",
+    "PriceOracle": "----",
+}
+
+```
+
+
+To start your first db
+
+```
+from codec.faucetcore import create_schema, oncedrop
+
+create_schema()
+
+oncedrop()
+
+```
