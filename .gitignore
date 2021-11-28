@@ -10,3 +10,5 @@ __pycache__/
 **/__pycache__
 **/node_modules
 key.py
+faucet.db
+deploy_history/faucet.db
