@@ -71,4 +71,4 @@ def init():
 
 
 if __name__ == '__main__':
-    create_schema()
+    init()
