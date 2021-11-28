@@ -3,13 +3,15 @@ import os
 import sqlite3
 
 sl_create_table = """
-CREATE TABLE memberfaucet (userid text, date numeric, claim text, symbol text, qty real, filled numeric)
+CREATE TABLE IF NOT EXISTS memberfaucet (userid text, date numeric, claim text, symbol text, qty real, filled numeric)
 """
 sl_determine_f = "SELECT userid, claim, date FROM memberfaucet WHERE claim=? or userid=?;"
 sl_start_f = "INSERT INTO memberfaucet VALUES (?,?,?,?,?,0);"
-sl_start_sample = "INSERT INTO memberfaucet VALUES ('oko','87348798','0x839283','BTC',100,0);"
+sl_start_sample = "INSERT INTO memberfaucet VALUES ('#testnotrightperson','87348798','0x0F470e5d97a124B0b53f6D317e84a1D8b6d0A911','BTC',100,0);"
 sl_update_filled = "UPDATE memberfaucet SET filled=1 WHERE claim=?;"
 sl_again_f = "UPDATE memberfaucet SET filled=0, date=? WHERE claim=?;"
+sl_remove_f = "DELETE FROM memberfaucet;"
+sl_drop_f = "DROP TABLE memberfaucet;"
 
 
 class TokenKeeperX:
@@ -78,6 +80,12 @@ class TokenKeeperX:
     def insertDataSample(self):
         # Insert a row of data
         self.cur.execute(sl_start_sample)
+
+    def clearAllRecords(self):
+        self.cur.execute(sl_remove_f)
+
+    def removeTable(self):
+        self.cur.execute(sl_drop_f)
 
     def done(self):
         # Save (commit) the changes

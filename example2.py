@@ -54,6 +54,7 @@ def oncedrop():
 
 def create_schema():
     okf = RSCFaucet(ROOT)
+    okf.removeTable()
     okf.sampleNewTable()
     okf.insertDataSample()
     okf.done()
