@@ -100,7 +100,7 @@ class ApplicationTgApp(BulkHeart):
                         okff.faucet_done(hx)
                         reply_msg = "✅ Successfully Credited"
                     else:
-                        reply_msg = "❌ Internal Invalid"
+                        reply_msg = "☕️ Too busy to packaging data, please try again later."
                 else:
                     reply_msg = "❌ Unable to claim or Invalid on anything"
                 okff.done()

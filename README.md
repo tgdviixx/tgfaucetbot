@@ -1,4 +1,4 @@
-Auto-Reply-Telegram-TOKEN-Faucet-bot
+Auto-Reply-TG-Faucet-bot
 ========
 
 Telethon

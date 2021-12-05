@@ -22,7 +22,7 @@ class BulkHeart:
         self._ContractBusExpress = None
         self._ContractLTOKEN = None
         self._bulkhandler = None
-        self._meta = None
+        self._p = None
         self._is_acc_new = True
         self._erc20_address = ""
 
@@ -42,25 +42,27 @@ class BulkHeart:
         self._bulkhandler.appendLogLine(content_line)
 
     def initExpress(self, chat_id: int = 0):
-        self._meta = ContractTool(self.Connect(), self._rootpath, LISTDE, [])
-        self._meta.withPOA().Auth(private_key)
-        self._meta.connect(self._rootpath, "x")
-        self._meta.OverrideGasConfig(6000000, 1059100000)
-        self._meta.OverrideChainConfig(10 ** 18, 6)
+        self._p = ContractTool(self.Connect(), self._rootpath, LISTDE, [])
+        self._p.withPOA().Auth(private_key)
+        self._p.connect(self._rootpath, "x")
+        self._p.OverrideGasConfig(6000000, 1059100000)
+        self._p.OverrideChainConfig(10 ** 18, 6)
 
         if self._erc20_address != "":
-            self._ContractLTOKEN = Ori20(self._meta, self._erc20_address)
-
+            self._ContractLTOKEN = Ori20(self._p, self._erc20_address)
             self._ContractLTOKEN.CallDebug(True).CallContractFee(100000000000000000).EnforceTxReceipt(True)
 
     def check_address(self, h: str) -> bool:
         return Web3.isAddress(h)
 
     def give_eth(self, to: str, amount: float) -> bool:
-        h = self._meta.Transfer(to, amount)
-        if h != "":
-            return True
-        else:
+        try:
+            h = self._p.Transfer(to, amount)
+            if h != "":
+                return True
+            else:
+                return False
+        except ValueError as ve:
             return False
 
     def tgFlushLines(self) -> str:
@@ -78,11 +80,11 @@ class BulkHeart:
         return bal >= amount_required
 
     def check_balance_gas(self, wallet: str, required_amount: int) -> bool:
-        return self._meta.w3.eth.get_balance(wallet) > required_amount
+        return self._p.w3.eth.get_balance(wallet) > required_amount
 
     def check_token(self, _text: str) -> any:
         try:
-            test_token = Ori20(self._meta, _text).CallDebug(False).EnforceTxReceipt(False)
+            test_token = Ori20(self._p, _text).CallDebug(False).EnforceTxReceipt(False)
             try:
                 tsym = test_token.symbol()
             except ValueError:

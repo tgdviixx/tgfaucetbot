@@ -19,7 +19,7 @@ import os
 from moody import conf, Config
 
 from codec.faucetcore import TokenKeeperX
-from codec.tg import ApplicationTgApp
+from codec.tgapp import ApplicationTgApp
 from key import TG_API, ALSO_ALLOWED, DEVELOPER_CHAT_ID
 
 ROOT = os.path.join(os.path.dirname(__file__))
