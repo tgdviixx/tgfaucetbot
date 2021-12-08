@@ -1,0 +1,7 @@
+LINE01 = "✅ Successfully Credited"
+LINE02 = "☕️ Too busy to packaging data, please try again later."
+LINE03 = "❌ Unable to claim or Invalid on anything"
+LINE04 = "❌ Invalid Address"
+LINE05 = "🚸 Please add me in a group."
+LCOMMANDthankyou = "thankyou"
+LCOMMANDplease = "please"

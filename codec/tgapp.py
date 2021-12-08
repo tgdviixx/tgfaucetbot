@@ -26,6 +26,7 @@ from telegram.ext import (
     CallbackContext
 )
 
+import codec
 from codec.BulkHeart import BulkHeart
 
 # Enable logging
@@ -98,16 +99,16 @@ class ApplicationTgApp(BulkHeart):
                     ethResult = self.give_eth(hx, okff.GiveAmount)
                     if ethResult:
                         okff.faucet_done(hx)
-                        reply_msg = "✅ Successfully Credited"
+                        reply_msg = codec.LINE01
                     else:
-                        reply_msg = "☕️ Too busy to packaging data, please try again later."
+                        reply_msg = codec.LINE02
                 else:
-                    reply_msg = "❌ Unable to claim or Invalid on anything"
+                    reply_msg = codec.LINE03
                 okff.done()
             else:
-                reply_msg = "❌ Invalid Address"
+                reply_msg = codec.LINE04
         else:
-            reply_msg = "🚸 Please add me to a group."
+            reply_msg = codec.LINE05
 
         update.message.reply_text(reply_msg)
         return FAUCETMODE
@@ -151,13 +152,13 @@ class ApplicationTgApp(BulkHeart):
         conv_handler = ConversationHandler(
             entry_points=[
                 CommandHandler('start', self.start),
-                CommandHandler("please", self.cmd_drop),
-                CommandHandler("thankyou", self.cmd_drop),
+                CommandHandler(codec.LCOMMANDplease, self.cmd_drop),
+                CommandHandler(codec.LCOMMANDthankyou, self.cmd_drop),
             ],
             states={
                 FAUCETMODE: [
-                    CommandHandler("please", self.cmd_drop),
-                    CommandHandler("thankyou", self.cmd_drop),
+                    CommandHandler(codec.LCOMMANDplease, self.cmd_drop),
+                    CommandHandler(codec.LCOMMANDthankyou, self.cmd_drop),
                 ],
             },
             fallbacks=self.commands()
